@@ -1,0 +1,41 @@
+.nav-item .active, .tab-content-box  {
+    background-color: #FFF !important;
+    
+}
+
+.nav-item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-item .active::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: #0043ff;
+    position: absolute;
+    margin-top: 3px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+.nav-link::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: #afafaf;
+    position: absolute;
+    margin-top: 3px;
+    border-radius: 10px;
+    margin-left: -20px;
+    border: 3px solid #afafaf;
+}
+
+.nav-item a {
+    padding-left: 28px; 
+}
+
+
+.tab-content-box {
+    min-height: 500px
+}

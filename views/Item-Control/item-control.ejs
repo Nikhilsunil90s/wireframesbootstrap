@@ -1,0 +1,96 @@
+<%- contentFor('HeaderCss') %>
+<!--Chartist Chart CSS -->
+<link rel="stylesheet" href="public/plugins/chartist/css/chartist.min.css">
+<!-- perticular page css -->
+
+<%- contentFor('breadcrumb') %>
+<div class="col-sm-6">
+        <h4 class="page-title">Item Control</h4>
+        
+</div>
+
+<%- contentFor('body') %>
+<div class="row">
+        <div class="col-12 p-3 bg-white shadow rounded">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Magento Item</th>
+                            <th>Magento Category</th>
+                            <th>Syncronise</th>
+                            <th>Default Category</th>
+                            <th>Override Default Category</th>
+                            <th>Override Category</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Item One</td>
+                            <td>Category One</td>
+                            <td>
+                                True
+                            </td>
+                            <td>
+                                Category Text
+                            </td>
+                            <td>
+                                False
+                            </td>
+                            <td>
+                                Overide Text One
+                            </td>
+                            </tr>
+
+                            <tr>
+                                <td>Item Two</td>
+                                <td>Category Two</td>
+                                <td>
+                                    False
+                                </td>
+                                <td>
+                                    Category Text 
+                                </td>
+                                <td>
+                                    True
+                                </td>
+                                <td>
+                                    Overide Text Two
+                                </td>
+
+                        </tr>
+                        <tr>
+                            <td>Item Three</td>
+                            <td>Category Three</td>
+                            <td>
+                                False
+                            </td>
+                            <td>
+                                Category Text
+                            </td>
+                            <td>
+                                True
+                            </td>
+                            <td>
+                                Overide Text Three
+                            </td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- end row -->
+
+<%- contentFor('FooterJs') %>
+ 
+ <script src="public/assets/pages/dashboard.js"></script>
+
+ <%- contentFor('BottomJs') %>
+ <!-- nothing -->
+
+
+
+

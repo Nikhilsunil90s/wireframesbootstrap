@@ -1,0 +1,89 @@
+<%- contentFor('HeaderCss') %>
+<!--Chartist Chart CSS -->
+<link rel="stylesheet" href="public/assets/css/pages/category.css">
+<!-- perticular page css -->
+
+<%- contentFor('breadcrumb') %>
+<div class="col-sm-6">
+    <h4 class="page-title">Category Mapping</h4>
+        
+</div>
+
+<%- contentFor('body') %>
+<div class="row category h-100">
+    <div class="col-6">
+        Magento
+    </div>
+    <div class="col-6">
+        Arcedia
+    </div>
+
+    <div class="col-6 p-0">
+        <ul class="nav flex-column" role="tablist">
+            <li class="nav-item ">
+              <a class="nav-link active" data-toggle="tab" href="#a">A</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" data-toggle="tab" href="#b">B</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#c">C</a>
+            </li>
+          </ul>
+    </div>
+    <div class="col-6 p-0 tab-content-box">
+        <div class="tab-content">
+            <div id="a" class="container tab-pane active">
+                <div class="custom-control custom-checkbox mt-3 mb-3">
+                    <input type="checkbox" class="custom-control-input" id="m" name="m">
+                    <label class="custom-control-label" for="m">M</label>
+                  </div>
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="n" name="n">
+                    <label class="custom-control-label" for="n">N</label>
+                  </div>
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="o" name="o">
+                    <label class="custom-control-label" for="o">O</label>
+                  </div>
+            </div>
+            <div id="b" class="container tab-pane fade">
+                <div class="custom-control custom-checkbox mt-3 mb-3">
+                    <input type="checkbox" class="custom-control-input" id="p" name="p">
+                    <label class="custom-control-label" for="p">P</label>
+                  </div>
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="q" name="q">
+                    <label class="custom-control-label" for="q">Q</label>
+                  </div>
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="r" name="r">
+                    <label class="custom-control-label" for="r">R</label>
+                  </div>
+            </div>
+            <div id="c" class="container tab-pane fade">
+                <div class="custom-control custom-checkbox mt-3 mb-3">
+                    <input type="checkbox" class="custom-control-input" id="j" name="j">
+                    <label class="custom-control-label" for="j">J</label>
+                  </div>
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="k" name="k">
+                    <label class="custom-control-label" for="k">K</label>
+                  </div>
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="l" name="l">
+                    <label class="custom-control-label" for="l">L</label>
+                  </div>
+            </div>
+          </div>
+    </div>
+</div>
+<!-- end row -->
+
+<%- contentFor('FooterJs') %>
+<%- contentFor('BottomJs') %>
+ <!-- nothing -->
+
+
+
+
