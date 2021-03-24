@@ -25,8 +25,8 @@ app.use(expressLayouts);
 // Add Route file with app
 app.use('/', router); 
 
+const port = 3000 || process.env.PORT;
 
-
-http.listen(3000, function(){
+http.listen(port, function(){
   console.log('listening on *:3000');
 });
