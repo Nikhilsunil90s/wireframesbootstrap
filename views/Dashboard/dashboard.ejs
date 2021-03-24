@@ -169,7 +169,7 @@
                             <label for="test">Disconnect: </label>
                         </div>
                         <div class="col-9">
-                        <button type="submit" class="btn btn-primary mb-2">Disconnect ?</button>
+                        <button type="submit" class="btn btn-primary mb-2" onclick="clearAll()">Disconnect ?</button>
                         <div class="form-group mx-sm-3 mb-2">
                             <input type="checkbox" id="deleteField"> 
                             <label for="deleteField">Delete</label>
@@ -233,6 +233,12 @@
 
 <%- contentFor('FooterJs') %>
 <script>
+    function clearAll(){
+        document.getElementById('usr').value = '';
+        document.getElementById('pwd').value = '';
+        document.getElementById('endpoint').value = '';
+        document.getElementById('myDate').value = '';
+    } 
     function butonPerform(){
         if(Math.floor(Math.random() * 10) > 5){
             console.log(Math.floor(Math.random() * 10));
