@@ -30,13 +30,19 @@
                             <td>Item One</td>
                             <td>Category One</td>
                             <td>
-                                True
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name = "customCheck" id="customCheck2">
+                                    <label class="custom-control-label" for="customCheck2"><span name = "customSpan"></span></label>
+                                </div>
                             </td>
                             <td>
                                 Category Text
                             </td>
                             <td>
-                                False
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck3" name = "customCheck">
+                                    <label class="custom-control-label" for="customCheck3"><span name = "customSpan"></span></label>
+                                </div>
                             </td>
                             <td>
                                 Overide Text One
@@ -47,13 +53,19 @@
                                 <td>Item Two</td>
                                 <td>Category Two</td>
                                 <td>
-                                    False
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck4" name = "customCheck">
+                                        <label class="custom-control-label" for="customCheck4"><span name = "customSpan"></span></label>
+                                    </div>
                                 </td>
                                 <td>
                                     Category Text 
                                 </td>
                                 <td>
-                                    True
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck5" name = "customCheck">
+                                        <label class="custom-control-label" for="customCheck5"><span name = "customSpan"></span></label>
+                                    </div>
                                 </td>
                                 <td>
                                     Overide Text Two
@@ -64,13 +76,19 @@
                             <td>Item Three</td>
                             <td>Category Three</td>
                             <td>
-                                False
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck6" name = "customCheck">
+                                    <label class="custom-control-label" for="customCheck6"><span name = "customSpan"></span></label>
+                                </div>
                             </td>
                             <td>
                                 Category Text
                             </td>
                             <td>
-                                True
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck7" name = "customCheck">
+                                    <label class="custom-control-label" for="customCheck7"><span name = "customSpan"></span></label>
+                                </div>
                             </td>
                             <td>
                                 Overide Text Three
@@ -86,6 +104,19 @@
 
 <%- contentFor('FooterJs') %>
  
+<script>
+    $('input[name="customCheck"]').click(function() {
+        console.log("Clicked");
+        var checked = $('input[name="customCheck"]').is(':checked');
+        console.log(checked);
+        if(checked){
+            $('input[name="customCheck"] span').text('Selected');
+        }
+        else{
+            $('input[name="customCheck"] span').text('Select');
+        }
+    });
+</script>
  <script src="public/assets/pages/dashboard.js"></script>
 
  <%- contentFor('BottomJs') %>

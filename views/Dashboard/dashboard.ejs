@@ -24,7 +24,7 @@
                         <label class="custom-control-label" for="enable">Enable</label>
                       </div>
                       <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="disable" name="enable" value="false">
+                        <input type="radio" class="custom-control-input" id="disable" name="enable" value="false" checked>
                         <label class="custom-control-label" for="disable">Disable</label>
                       </div>
                 </div>
@@ -39,26 +39,67 @@
                 <div class="mb-2 ">
                     <span class="font-weight-bolder ">Mode</span>
                 </div>
-                <div class="bg-white rounded pt-3 pb-3 pl-3 shadow">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="text-center pl-3">Arcedia  <span><b> --> </b></span>  Magento</div>
-                            <div class="custom-control custom-radio">
-                                <div class="custom-control custom-radio text-center" >
-                                    <input type="radio" class="custom-control-input" id="am" name="mode" value="true">
-                                    <label class="custom-control-label" for="am"></label>
-                                  </div>  
+                <div class="col-12 bg-white p-3 rounded shadow">
+                    <div class="mb-2">
+                        <span class="font-weight-bolder">Mode</span>
+                    </div>
+                    <div class="row pl-2">
+                        <div class="col-12 col-md-8 mb-3 bg-light p-2 rounded">
+                            <div class="row w-100">
+                                <div class="col-3">
+                                    <div class="mb-2">
+                                        <span class="font-weight-bolder">Items:</span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <span class="font-weight-bolder">Orders:</span>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="mb-2">
+                                        <span class="font-weight-bolder">Magento -> Arcadier</span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <span class="font-weight-bolder">Arcadier -> Magento</span>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="custom-control custom-radio text-center mt-3" >
+                                        <input type="radio" class="custom-control-input" id="ma" name="mode" value="true" checked>
+                                        <label class="custom-control-label" for="ma"></label>
+                                      </div>  
+                                </div>
+    
                             </div>
                         </div>
-        
-                        <div class="col-6">
-                            <div class="text-center">Magento  <span><b> --> </b></span>  Arcedia</div>
-                            <div class="custom-control custom-radio text-center ">
-                                <input type="radio" class="custom-control-input" id="ma" name="mode" value="false">
-                                <label class="custom-control-label" for="ma"></label>
-                              </div>
+                        <div class="col-12 col-md-8 bg-light p-2 rounded">
+                            <div class="row w-100">
+                                <div class="col-3">
+                                    <div class="mb-2">
+                                        <span class="font-weight-bolder">Items:</span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <span class="font-weight-bolder">Orders:</span>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="mb-2">
+                                        <span class="font-weight-bolder"> Arcadier -> Magento </span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <span class="font-weight-bolder"> Magento -> Arcadier </span>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="custom-control custom-radio text-center mt-3" >
+                                        <input type="radio" class="custom-control-input" id="am" name="mode" value="true">
+                                        <label class="custom-control-label" for="am"></label>
+                                      </div>  
+                                </div>
+    
+                            </div>
                         </div>
                     </div>
+    
                 </div>
             </div>
         </div>
@@ -78,14 +119,14 @@
                     </div>
                     <div class="row mt-3">
                         <div class="col-3">
-                            <label for="usr">User : </label>
+                            <label for="usr">User: </label>
                         </div>
                         <div class="col-9 pr-5">
                             <input type="text" class="form-control" id="usr">
                         </div>
 
                         <div class="col-3 mt-2">
-                            <label for="pwd">Password : </label>
+                            <label for="pwd">Password: </label>
                         </div>
                         <div class="col-9 pr-5 mt-2">
                             <input type="text" class="form-control" id="pwd">
@@ -93,27 +134,28 @@
 
 
                         <div class="col-3 mt-2">
-                            <label for="unknown">Unknown : </label>
+                            <label for="unknown">Endpoint: </label>
                         </div>
                         <div class="col-9 pr-5 mt-2">
                             <input type="text" class="form-control" id="unnown">
                         </div>
 
                         <div class="col-3 mt-2">
-                            <label for="test">Test : </label>
+                            <label for="test">Test: </label>
                         </div>
                         <div class="col-9 pr-5 mt-2">
-                            <button class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                            <button class="btn btn-info" onclick="butonPerform()">TEST ?</button>
+                            <!-- <button class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                                 <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
                               </svg></button>
                             <button class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
                                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                              </svg></button>
+                              </svg></button> -->
                         </div>
 
 
                         <div class="col-3 mt-2">
-                            <label for="test">Connect : </label>
+                            <label for="test">Connect: </label>
                         </div>
                         <div class="form-group mx-sm-3 mb-2 mt-2">
                             <input type="text" class="form-control" id="myDate">
@@ -122,12 +164,15 @@
                     </div>
                     <div class="row mt-2">
                         <div class="col-3">
-                            <label for="test">Disconnect : </label>
+                            <label for="test">Disconnect: </label>
                         </div>
+                        <div class="col-9">
+                        <button type="submit" class="btn btn-primary mb-2">Disconnect ?</button>
                         <div class="form-group mx-sm-3 mb-2">
-                            <input type="text" class="form-control" id="deleteField">
+                            <input type="checkbox" id="deleteField"> 
+                            <label for="deleteField">Delete</label>
                         </div>
-                        <button type="submit" class="btn btn-primary mb-2" onclick="deleteIt()">Delete ?</button>
+                        </div>
                     </div>
 
 
@@ -149,12 +194,10 @@
                 <div class="col-12 col-md-12 p-2">
                     <div class="bg-white rounded pt-3 pb-3 pl-3 shadow">
                         <div class="row mb-3">
-                            <div class="col-6 text-center">INITIAL</div>
-                            <div class="col-6 text-center">DATE/TIME</div>
+                            <div class="col-3 text-center font-weight-bold">INITIAL  DATE/TIME</div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col-6 text-center">IMPORT</div>
-                            <div class="col-6 text-center">DATE/TIME</div>
+                            <div class="col-3 text-center font-weight-bold">IMPORT  DATE/TIME</div>
                         </div>
                     </div>
                 </div>
@@ -166,10 +209,14 @@
                 <div class="col-12 col-md-12 p-2">
                     <div class="bg-white rounded pt-3 pb-3 pl-3 shadow">
                         <div class="text-center">
-                            DO NOT SYNC ITEMS WITH LESS THAN <span><b>5</b></span> IN STORE.
+                            DO NOT SYNC ITEMS WITH LESS THAN <span>
+                                <input type="text" style="width: 35px; border-radius: 5px;" placeholder="51" name="lessinput">
+                            </span> IN STORE.
                         </div>
                         <div class="text-center">
-                            DO NOT SYNC ITEMS BELOW <span><b>51</b></span> IN STORE.
+                            DO NOT SYNC ITEMS BELOW <span>
+                                <input type="text" style="width: 35px; border-radius: 5px;" placeholder="5" name="belowinput">
+                            </span> IN STOCK.
                         </div>
                     </div>
                 </div>
@@ -184,6 +231,12 @@
 
 <%- contentFor('FooterJs') %>
 <script>
+    function butonPerform(){
+        setTimeout(function(){
+            console.log('Tested!');
+        },1500)
+    };
+
     function myFunction() {
       const x = new Date();
       console.log(x);
@@ -193,6 +246,7 @@
     function deleteIt(){
 
     };
+
 </script>
  <script src="public/assets/pages/dashboard.js"></script>
 
