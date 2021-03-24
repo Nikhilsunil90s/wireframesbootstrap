@@ -137,30 +137,32 @@
                             <label for="unknown">Endpoint: </label>
                         </div>
                         <div class="col-9 pr-5 mt-2">
-                            <input type="text" class="form-control" id="unnown">
+                            <input type="text" class="form-control" id="endpoint">
                         </div>
 
                         <div class="col-3 mt-2">
                             <label for="test">Test: </label>
                         </div>
-                        <div class="col-9 pr-5 mt-2">
-                            <button class="btn btn-info" onclick="butonPerform()">TEST ?</button>
-                            <!-- <button class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                        <div class="col-5 pr-5 mt-2">
+                            <button class="btn btn-info" id="testBtn" onclick="butonPerform()">TEST ?</button>
+                        </div>
+                        <div class="col-4 pr-5 mt-2">
+                            <button id="testSuccess" class="btn btn-success" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                                 <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
                               </svg></button>
-                            <button class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                            <button id="testFail" class="btn btn-danger"   style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
                                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                              </svg></button> -->
+                              </svg></button>
                         </div>
 
 
                         <div class="col-3 mt-2">
-                            <label for="test">Connect: </label>
+                            <label for="myDate">Connect: </label>
                         </div>
                         <div class="form-group mx-sm-3 mb-2 mt-2">
-                            <input type="text" class="form-control" id="myDate">
+                            <input type="text" class="form-control" id="myDate" readonly>
                         </div>
-                        <button type="submit" class="btn btn-primary mb-2 mt-2" onclick="myFunction()">Date</button>
+                        <!-- <button type="submit" class="btn btn-primary mb-2 mt-2" onclick="myFunction()">Date</button> -->
                     </div>
                     <div class="row mt-2">
                         <div class="col-3">
@@ -232,9 +234,17 @@
 <%- contentFor('FooterJs') %>
 <script>
     function butonPerform(){
-        setTimeout(function(){
-            console.log('Tested!');
-        },1500)
+        if(Math.floor(Math.random() * 10) > 5){
+            console.log(Math.floor(Math.random() * 10));
+            $("#testSuccess").css('display' , 'block');
+            $("testFail").css('display' , 'none');
+            myFunction();
+        }
+        else{
+            console.log('Lesser Than 5');
+            $("#testSuccess").css('display' , 'none');
+            $("testFail").css('display' , 'block');
+        }
     };
 
     function myFunction() {
